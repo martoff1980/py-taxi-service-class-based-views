@@ -1,21 +1,25 @@
 <!-- @format -->
 
-{% extends "base.html" %} {% block content %}
-<h1>Manufacturer List</h1>
+{% extends "base.html" %} 
 
-<table class="table">
-	<tr>
-		<th>ID</th>
-		<th>Name</th>
-		<th>Country</th>
-	</tr>
-	{% for manufacturer in manufacturer_list %}
-	<tr>
-		<td>{{ manufacturer.id }}</td>
-		<td>{{ manufacturer.name }}</td>
-		<td>{{ manufacturer.country }}</td>
-	</tr>
-	{% endfor %}
-</table>
+	{% block content %}
+	<h1>Manufacturer List</h1>
 
-{% include "includes/pagination.html" %} {% endblock %}
+	<table class="table">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Country</th>
+		</tr>
+		{% for manufacturer in manufacturer_list %}
+		<tr>
+			<td>{{ manufacturer.id }}</td>
+			<td>{{ manufacturer.name }}</td>
+			<td>{{ manufacturer.country }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	{% include "includes/pagination.html" %}
+
+{% endblock %}

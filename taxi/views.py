@@ -35,13 +35,11 @@ class CarListView(generic.ListView):
 class CarDetailView(generic.DetailView):
     model = Car
     paginate_by = 5
-    ordering = ["id"]
 
 
 class DriverListView(generic.ListView):
     model = Driver
     paginate_by = 5
-    ordering = ["id"]
 
 
 class DriverDetailView(generic.DetailView):
